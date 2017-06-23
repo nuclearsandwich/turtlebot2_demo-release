@@ -1,4 +1,4 @@
-From a3b60a3e3c543f1145c08a929615d6f77017882c Mon Sep 17 00:00:00 2001
+From 723471f6ffef8ca2831f8e4d6e02b73a97930418 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 21 Jun 2017 14:04:54 -0400
 Subject: [PATCH] turtlebot2_drivers depends on some kinetic packages.
@@ -72,5 +72,5 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_install
 -- 
-2.7.4
+2.13.1
 
