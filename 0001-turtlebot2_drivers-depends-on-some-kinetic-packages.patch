@@ -1,4 +1,4 @@
-From 723471f6ffef8ca2831f8e4d6e02b73a97930418 Mon Sep 17 00:00:00 2001
+From 4704aacfbbade7ecf47344a62ac7dee99e581d23 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 21 Jun 2017 14:04:54 -0400
 Subject: [PATCH] turtlebot2_drivers depends on some kinetic packages.
@@ -29,10 +29,10 @@ index 3655e8a..38695d5 100644
  @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
  Description: @(Description)
 diff --git a/debian/rules.em b/debian/rules.em
-index fde12b1..68e8d05 100755
+index f589242..9a2d6c8 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -25,6 +25,7 @@ override_dh_auto_configure:
+@@ -30,6 +30,7 @@ override_dh_auto_configure:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
@@ -40,7 +40,7 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_configure @(debhelper_autoconfigure_options)
  
-@@ -32,6 +33,7 @@ override_dh_auto_build:
+@@ -37,6 +38,7 @@ override_dh_auto_build:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
@@ -48,7 +48,7 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_build
  
-@@ -40,6 +42,7 @@ override_dh_auto_test:
+@@ -45,6 +47,7 @@ override_dh_auto_test:
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
  	echo -- Running tests. Even if one of them fails the build is not canceled.
@@ -56,7 +56,7 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_test || true
  
-@@ -47,6 +50,7 @@ override_dh_shlibdeps:
+@@ -52,6 +55,7 @@ override_dh_shlibdeps:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
@@ -64,7 +64,7 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_shlibdeps -l$(CURDIR)/debian/@(Package)/@(InstallationPrefix)/lib/
  
-@@ -54,5 +58,6 @@ override_dh_auto_install:
+@@ -59,5 +63,6 @@ override_dh_auto_install:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
@@ -72,5 +72,5 @@ index fde12b1..68e8d05 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_install
 -- 
-2.13.1
+2.7.4
 
