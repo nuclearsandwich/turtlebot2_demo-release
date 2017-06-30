@@ -1,0 +1,12 @@
+Source: ros-r2b2-turtlebot2-amcl
+Section: misc
+Priority: extra
+Maintainer:  <dhood@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-r2b2-ament-cmake, ros-r2b2-ament-lint-auto, ros-r2b2-ament-lint-common, ros-r2b2-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-r2b2-turtlebot2-amcl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-r2b2-amcl, ros-r2b2-ament-index-python, ros-r2b2-astra-camera, ros-r2b2-depthimage-to-laserscan, ros-r2b2-joy, ros-r2b2-launch, ros-r2b2-map-server, ros-r2b2-ros2run, ros-r2b2-teleop-twist-joy, ros-r2b2-tf2-ros, ros-r2b2-turtlebot2-drivers, ros-r2b2-ros-workspace
+Description: Demo of turtlebot2 localization with amcl.
