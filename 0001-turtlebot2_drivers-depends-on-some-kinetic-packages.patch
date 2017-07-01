@@ -1,4 +1,4 @@
-From 4704aacfbbade7ecf47344a62ac7dee99e581d23 Mon Sep 17 00:00:00 2001
+From 86d0ee0d12e07715c97114a92962c7c488a9d2a6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 21 Jun 2017 14:04:54 -0400
 Subject: [PATCH] turtlebot2_drivers depends on some kinetic packages.
