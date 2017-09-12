@@ -8,7 +8,7 @@ Standards-Version: 3.9.2
 
 Package: @(Package)
 Architecture: any
-Depends: @(DebhelperDepends), ${misc:Depends}, ros-kinetic-kobuki-driver, @(', '.join(Depends))
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-kobuki-driver, @(', '.join(Depends))
 @[if Conflicts]Conflicts: @(', '.join(Conflicts))@\n@[end if]@
 @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
 Description: @(Description)
