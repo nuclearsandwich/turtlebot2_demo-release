@@ -1,4 +1,4 @@
-From fa8a70da8d62ddafa8504b84cb7256248fcd7627 Mon Sep 17 00:00:00 2001
+From d3021854cb24eee4d6fa45602328c78495eed17d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 12 Sep 2017 11:29:54 -0400
 Subject: [PATCH 2/2] Fix dependency template.

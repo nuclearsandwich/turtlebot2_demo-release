@@ -1,4 +1,4 @@
-From 47f7866e0c4b59884320a735ab032b4a14be50eb Mon Sep 17 00:00:00 2001
+From 1698fe05110cb66d107ba099df61be09fd9e6d5d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 12 Sep 2017 11:27:24 -0400
 Subject: [PATCH 1/2] Use kinetic for turtlebot2 drivers.
