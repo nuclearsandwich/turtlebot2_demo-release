@@ -1,0 +1,12 @@
+Source: ros-ardent-depthimage-to-pointcloud2
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-ardent-ament-cmake, ros-ardent-ament-lint-auto, ros-ardent-ament-lint-common, ros-ardent-image-geometry, ros-ardent-rclcpp, ros-ardent-sensor-msgs, ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-depthimage-to-pointcloud2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-ardent-image-geometry, ros-ardent-rclcpp, ros-ardent-sensor-msgs, ros-ardent-ros-workspace
+Description: A simple node to convert a depth image and camera info into a PointCloud2.
