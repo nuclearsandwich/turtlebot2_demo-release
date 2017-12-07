@@ -27,9 +27,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+// This file is originally from:
+// https://github.com/turtlebot/turtlebot_apps/blob/cefaf0a/turtlebot_follower/src/follower.cpp
+
 #include <vector>
 
 #include <rclcpp/rclcpp.hpp>
+#include <rcutils/logging_macros.h>
 //#include <ros/ros.h>
 //#include <pluginlib/class_list_macros.h>
 //#include <nodelet/nodelet.h>
@@ -45,6 +49,9 @@
 //#include <depth_image_proc/depth_traits.h>
 #include "turtlebot2_follower/depth_traits.h"
 
+#define ROS_WARN RCUTILS_LOG_WARN
+#define ROS_ERROR RCUTILS_LOG_ERROR
+#define ROS_INFO_THROTTLE(sec, ...) RCUTILS_LOG_INFO_THROTTLE(RCUTILS_STEADY_TIME, sec, __VA_ARGS__)
 
 namespace turtlebot_follower
 {
@@ -63,7 +70,7 @@ public:
    * @brief The constructor for the follower.
    * Constructor for the follower.
    */
-  TurtlebotFollower(rclcpp::node::Node::SharedPtr n) : min_y_(0.1), max_y_(0.5),
+  TurtlebotFollower(rclcpp::Node::SharedPtr n) : min_y_(0.1), max_y_(0.5),
                         min_x_(-0.3), max_x_(0.3),
                         max_z_(1.5), goal_z_(0.6),
                         z_scale_(1.0), x_scale_(5.0), enabled_(true), n_(n)
@@ -160,7 +167,7 @@ private:
     // We're assuming floating point data
     if(depth_msg->encoding != sensor_msgs::image_encodings::TYPE_32FC1)
     {
-      printf("received depth image with unsupported encoding: %s\n", depth_msg->encoding.c_str());
+      ROS_ERROR("received depth image with unsupported encoding: %s", depth_msg->encoding.c_str());
       return;
     }
 
@@ -226,8 +233,7 @@ private:
       x /= n;
       y /= n;
       if(z > max_z_){
-        //ROS_INFO_THROTTLE(1, "Centroid too far away %f, stopping the robot\n%s", z);
-        printf("Centroid too far away %f, stopping the robot\n", z);
+        ROS_INFO_THROTTLE(1, "Centroid too far away %f, stopping the robot", z);
         if (enabled_)
         {
           cmdpub_->publish(cmd_vel_msg);
@@ -235,8 +241,7 @@ private:
         return;
       }
 
-      //ROS_INFO_THROTTLE(1, "Centroid at %f %f %f with %d points", x, y, z, n);
-      printf("Centroid at %f %f %f with %d points\n", x, y, z, n);
+      ROS_INFO_THROTTLE(1, "Centroid at %f %f %f with %d points", x, y, z, n);
       //publishMarker(x, y, z);
 
       if (enabled_)
@@ -248,8 +253,7 @@ private:
     }
     else
     {
-      //ROS_INFO_THROTTLE(1, "Not enough points(%d) detected, stopping the robot", n);
-      printf("Not enough points(%d) detected, stopping the robot\n", n);
+      ROS_INFO_THROTTLE(1, "Not enough points(%d) detected, stopping the robot", n);
       //publishMarker(x, y, z);
 
       if (enabled_)
@@ -344,11 +348,11 @@ private:
   }
 */
 
-  rclcpp::node::Node::SharedPtr n_;
+  rclcpp::Node::SharedPtr n_;
   //ros::Subscriber sub_;
-  rclcpp::subscription::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_;
+  rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_;
   //ros::Publisher cmdpub_;
-  rclcpp::publisher::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdpub_;
+  rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdpub_;
   //ros::Publisher markerpub_;
   //ros::Publisher bboxpub_;
 };
@@ -362,7 +366,7 @@ int
 main(int argc, char** argv)
 {
   rclcpp::init(argc, argv);
-  auto n = rclcpp::node::Node::make_shared("turtlebot2_follower");
+  auto n = rclcpp::Node::make_shared("turtlebot2_follower");
   turtlebot_follower::TurtlebotFollower tf(n);
   tf.onInit();
   rclcpp::spin(n);
