@@ -1,7 +1,7 @@
-From 2feef6247e351988c2bd0921709056085c484d68 Mon Sep 17 00:00:00 2001
+From 5d5029d55e7eeaa889dc42b46f28edbb809cc7d9 Mon Sep 17 00:00:00 2001
 From: Mikael Arguedas <mikael@osrfoundation.org>
 Date: Thu, 28 Jun 2018 14:35:28 -0700
-Subject: [PATCH] Add melodic dependencies and environment.
+Subject: [PATCH 1/2] Add melodic dependencies and environment.
 
 ---
  debian/control.em | 4 ++--

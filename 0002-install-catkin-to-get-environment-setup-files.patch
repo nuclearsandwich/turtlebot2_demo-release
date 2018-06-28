@@ -1,0 +1,32 @@
+From 904c3805235a6569af3bdc81ce065ac70ad4b023 Mon Sep 17 00:00:00 2001
+From: Mikael Arguedas <mikael@osrfoundation.org>
+Date: Thu, 28 Jun 2018 15:26:39 -0700
+Subject: [PATCH 2/2] install catkin to get environment setup files
+
+---
+ debian/control.em | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/debian/control.em b/debian/control.em
+index ccc1a6c..8b18af9 100644
+--- a/debian/control.em
++++ b/debian/control.em
+@@ -2,13 +2,13 @@ Source: @(Package)
+ Section: misc
+ Priority: extra
+ Maintainer: @(Maintainer)
+-Build-Depends: debhelper (>= @(debhelper_version).0.0), ros-melodic-kobuki-driver, @(', '.join(BuildDepends))
++Build-Depends: debhelper (>= @(debhelper_version).0.0), ros-melodic-catkin, ros-melodic-kobuki-driver, @(', '.join(BuildDepends))
+ Homepage: @(Homepage)
+ Standards-Version: 3.9.2
+ 
+ Package: @(Package)
+ Architecture: any
+-Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-kobuki-driver, @(', '.join(Depends))
++Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-catkin, ros-melodic-kobuki-driver, @(', '.join(Depends))
+ @[if Conflicts]Conflicts: @(', '.join(Conflicts))@\n@[end if]@
+ @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
+ Description: @(Description)
+-- 
+2.7.4
+
