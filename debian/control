@@ -1,0 +1,12 @@
+Source: ros-bouncy-turtlebot2-cartographer
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake, ros-bouncy-ament-lint-auto, ros-bouncy-ament-lint-common, ros-bouncy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-turtlebot2-cartographer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-ament-index-python, ros-bouncy-astra-camera, ros-bouncy-cartographer-ros, ros-bouncy-depthimage-to-laserscan, ros-bouncy-depthimage-to-pointcloud2, ros-bouncy-joy, ros-bouncy-launch, ros-bouncy-ros2run, ros-bouncy-teleop-twist-joy, ros-bouncy-tf2-ros, ros-bouncy-turtlebot2-drivers, ros-bouncy-ros-workspace
+Description: Launch files for turtlebot2 cartographer demo
