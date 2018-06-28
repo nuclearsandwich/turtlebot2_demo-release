@@ -1,0 +1,19 @@
+ros-bouncy-depthimage-to-pointcloud2 (0.5.0-0bionic) bionic; urgency=high
+
+  * make it work on Bionic (#81 <https://github.com/ros2/turtlebot2_demo/issues/81>)
+  * Contributors: Mikael Arguedas
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 28 Jun 2018 07:00:00 -0000
+
+ros-bouncy-depthimage-to-pointcloud2 (0.4.0-0bionic) bionic; urgency=high
+
+  * Update for rclcpp namespace removals (#71 <https://github.com/ros2/turtlebot2_demo/issues/71>)
+  * Switch to using the RCUTILS_* logging macros. (#66 <https://github.com/ros2/turtlebot2_demo/issues/66>)
+  * update style to match latest uncrustify (#65 <https://github.com/ros2/turtlebot2_demo/issues/65>)
+  * 0.0.3
+  * rename depth_to_pointcloud to dephimage_to_pointcloud2 (#50 <https://github.com/ros2/turtlebot2_demo/issues/50>)
+  * Contributors: Chris Lalancette, Dirk Thomas, Mikael Arguedas, dhood
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 08 Dec 2017 08:00:00 -0000
+
+
