@@ -1,0 +1,59 @@
+ros-bouncy-turtlebot2-drivers (0.5.1-0bionic) bionic; urgency=high
+
+
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Tue, 17 Jul 2018 07:00:00 -0000
+
+ros-bouncy-turtlebot2-drivers (0.5.0-0bionic) bionic; urgency=high
+
+  * make it work on Bionic (#81 <https://github.com/ros2/turtlebot2_demo/issues/81>)
+  * ParameterService auto started (#83 <https://github.com/ros2/turtlebot2_demo/issues/83>)
+  * remove trailing whitespace
+  * add kobuki port definition for windows (assume COM1) (#79 <https://github.com/ros2/turtlebot2_demo/issues/79>)
+  * Contributors: Brian Fjeldstad, Mikael Arguedas, Shane Loretz
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Thu, 28 Jun 2018 07:00:00 -0000
+
+ros-bouncy-turtlebot2-drivers (0.4.0-0bionic) bionic; urgency=high
+
+  * add missing maintainer names (#73 <https://github.com/ros2/turtlebot2_demo/issues/73>)
+  * Remove parameter_service namespace re-introduced (#72 <https://github.com/ros2/turtlebot2_demo/issues/72>)
+  * Update for rclcpp namespace removals (#71 <https://github.com/ros2/turtlebot2_demo/issues/71>)
+  * [kobuki_driver] use rclcpp logging (#69 <https://github.com/ros2/turtlebot2_demo/issues/69>)
+  * Switch to using the RCUTILS_* logging macros. (#66 <https://github.com/ros2/turtlebot2_demo/issues/66>)
+  * 0.0.3
+  * Disable strict-aliasing warnings in the kobuki driver. (#55 <https://github.com/ros2/turtlebot2_demo/issues/55>)
+  * 0.0.2
+  * Tb2 repos refactor (#46 <https://github.com/ros2/turtlebot2_demo/issues/46>)
+  * Make sure to fully initialize the QoS structures. (#43 <https://github.com/ros2/turtlebot2_demo/issues/43>)
+  * Fixes to make TB2 follower demo build/launch. (#41 <https://github.com/ros2/turtlebot2_demo/issues/41>)
+  * use CMAKE_X_STANDARD and check compiler rather than platform
+  * Disable the RGB and IR cameras when launching the tb2 carto demo. (#39 <https://github.com/ros2/turtlebot2_demo/issues/39>)
+  * Update exec dependencies (#37 <https://github.com/ros2/turtlebot2_demo/issues/37>)
+  * Make the static transform for the IMU agree with reality.
+  * Add in launch files for cartographer 2D and 3D.
+  * More fixes for the kobuki node.
+  * Switch to rcutils_system_time_now. (#25 <https://github.com/ros2/turtlebot2_demo/issues/25>)
+  * Add depth_to_pointcloud node and add some necessary information to kobuki_node (#11 <https://github.com/ros2/turtlebot2_demo/issues/11>)
+  * fix isolated build by adding missing dep (#17 <https://github.com/ros2/turtlebot2_demo/issues/17>)
+  * add tf2 dep (#16 <https://github.com/ros2/turtlebot2_demo/issues/16>)
+  * add missing sensor_msgs dependency (#10 <https://github.com/ros2/turtlebot2_demo/issues/10>)
+  * Flesh out kobuki driver (#7 <https://github.com/ros2/turtlebot2_demo/issues/7>)
+  * tweak
+  * all manner of improvements
+  * add some launch files
+  * comments
+  * add some param parsing
+  * comment out debug
+  * start adding parameters
+  * turtlebot follows
+  * Merge branch 'master' of github.com:ros2/turtlebot2_demo
+  * make dumb teleop repeat
+  * add watchdog and improve cleanup
+  * first working driver
+  * first version of ROS 2 node that links against kobuki_driver
+  * Contributors: Brian Gerkey, Chris Lalancette, Daniel Stonier, Dirk Thomas, Mikael Arguedas, Morgan Quigley, Rohan Agrawal, dhood, gerkey, vdiluoffo
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Fri, 08 Dec 2017 08:00:00 -0000
+
+
