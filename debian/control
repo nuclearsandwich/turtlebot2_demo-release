@@ -1,0 +1,12 @@
+Source: ros-bouncy-turtlebot2-demo
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake, ros-bouncy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-turtlebot2-demo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-depthimage-to-pointcloud2, ros-bouncy-turtlebot2-amcl, ros-bouncy-turtlebot2-cartographer, ros-bouncy-turtlebot2-drivers, ros-bouncy-turtlebot2-follower, ros-bouncy-turtlebot2-teleop, ros-bouncy-ros-workspace
+Description: Metapackage aggregating the turtlebot2 demo packages

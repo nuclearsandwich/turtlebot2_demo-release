@@ -1,0 +1,20 @@
+ros-bouncy-turtlebot2-demo (0.5.1-0bionic) bionic; urgency=high
+
+  * add a turtlebot2_demo metapackage (#88 <https://github.com/ros2/turtlebot2_demo/issues/88>) (#89 <https://github.com/ros2/turtlebot2_demo/issues/89>)
+  * Contributors: Mikael Arguedas
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Tue, 17 Jul 2018 07:00:00 -0000
+
+ros-bouncy-turtlebot2-demo (0.5.0-0bionic) bionic; urgency=high
+
+
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Thu, 28 Jun 2018 07:00:00 -0000
+
+ros-bouncy-turtlebot2-demo (0.4.0-0bionic) bionic; urgency=high
+
+
+
+ -- Mikael Arguedas <mikael@osrfoundation.org>  Fri, 08 Dec 2017 08:00:00 -0000
+
+
