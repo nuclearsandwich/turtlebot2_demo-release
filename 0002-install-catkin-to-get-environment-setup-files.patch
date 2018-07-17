@@ -1,4 +1,4 @@
-From 904c3805235a6569af3bdc81ce065ac70ad4b023 Mon Sep 17 00:00:00 2001
+From 73d8244961d06898356181c4eb1daf1b1928a1c0 Mon Sep 17 00:00:00 2001
 From: Mikael Arguedas <mikael@osrfoundation.org>
 Date: Thu, 28 Jun 2018 15:26:39 -0700
 Subject: [PATCH 2/2] install catkin to get environment setup files
