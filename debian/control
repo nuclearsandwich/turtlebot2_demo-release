@@ -1,0 +1,12 @@
+Source: ros-ardent-turtlebot2-demo
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-ardent-ament-cmake, ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-turtlebot2-demo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-ardent-depthimage-to-pointcloud2, ros-ardent-turtlebot2-amcl, ros-ardent-turtlebot2-cartographer, ros-ardent-turtlebot2-drivers, ros-ardent-turtlebot2-follower, ros-ardent-turtlebot2-teleop, ros-ardent-ros-workspace
+Description: Metapackage aggregating the turtlebot2 demo packages
