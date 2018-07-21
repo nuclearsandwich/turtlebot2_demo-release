@@ -2,19 +2,19 @@ repositories:
   ros2/cartographer_ros:
     type: git
     url: https://github.com/ros2/cartographer_ros.git
-    version: 2.1.1
+    version: 2.0.0
   ros2/depthimage_to_laserscan:
     type: git
     url: https://github.com/ros2/depthimage_to_laserscan.git
-    version: 2.1.0
+    version: 2.0.0
   ros2/joystick_drivers:
     type: git
     url: https://github.com/ros2/joystick_drivers.git
-    version: 2.1.0
+    version: 2.0.0
   ros2/navigation:
     type: git
     url: https://github.com/ros2/navigation.git
-    version: 3.1.0
+    version: 3.0.0
   ros2/pcl_conversions:
     type: git
     url: https://github.com/ros2/pcl_conversions.git
@@ -22,24 +22,24 @@ repositories:
   ros2/ros_astra_camera:
     type: git
     url: https://github.com/ros2/ros_astra_camera.git
-    version: 2.1.1
+    version: 2.0.0
   ros2/teleop_twist_joy:
     type: git
     url: https://github.com/ros2/teleop_twist_joy.git
-    version: 2.1.0
+    version: 2.0.0
   ros2/teleop_twist_keyboard:
     type: git
     url: https://github.com/ros2/teleop_twist_keyboard.git
-    version: 2.1.1
+    version: 2.0.0
   ros2/turtlebot2_demo:
     type: git
     url: https://github.com/ros2/turtlebot2_demo.git
-    version: 0.5.0
-  ros-perception/vision_opencv:
+    version: 0.4.0
+  ros2/vision_opencv:
     type: git
-    url: https://github.com/ros-perception/vision_opencv.git
-    version: 2.0.1
+    url: https://github.com/ros2/vision_opencv.git
+    version: 84a7420313c0f829842de7b2b4f7900118155bba
   vendor/cartographer:
     type: git
     url: https://github.com/ros2/cartographer
-    version: 2.1.0
+    version: 2.0.0

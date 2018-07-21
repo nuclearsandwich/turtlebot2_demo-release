@@ -2,13 +2,8 @@
 Changelog for package depthimage_to_pointcloud2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.5.1 (2018-07-17)
+0.4.1 (2018-07-20)
 ------------------
-
-0.5.0 (2018-06-28)
-------------------
-* make it work on Bionic (`#81 <https://github.com/ros2/turtlebot2_demo/issues/81>`_)
-* Contributors: Mikael Arguedas
 
 0.4.0 (2017-12-08)
 ------------------

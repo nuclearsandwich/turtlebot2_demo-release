@@ -2,16 +2,8 @@
 Changelog for package turtlebot2_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.5.1 (2018-07-17)
+0.4.1 (2018-07-20)
 ------------------
-
-0.5.0 (2018-06-28)
-------------------
-* make it work on Bionic (`#81 <https://github.com/ros2/turtlebot2_demo/issues/81>`_)
-* ParameterService auto started (`#83 <https://github.com/ros2/turtlebot2_demo/issues/83>`_)
-* remove trailing whitespace
-* add kobuki port definition for windows (assume COM1) (`#79 <https://github.com/ros2/turtlebot2_demo/issues/79>`_)
-* Contributors: Brian Fjeldstad, Mikael Arguedas, Shane Loretz
 
 0.4.0 (2017-12-08)
 ------------------

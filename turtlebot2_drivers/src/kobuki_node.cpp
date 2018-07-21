@@ -22,13 +22,11 @@
 
 #ifndef _WIN32
 # pragma GCC diagnostic push
-# pragma GCC diagnostic ignored "-Wdeprecated"
 # pragma GCC diagnostic ignored "-Wignored-qualifiers"
 # pragma GCC diagnostic ignored "-Wsign-compare"
 # pragma GCC diagnostic ignored "-Wstrict-aliasing"
 # pragma GCC diagnostic ignored "-Wunused-local-typedefs"
 # pragma GCC diagnostic ignored "-Wunused-parameter"
-# pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 #endif
 #include "kobuki_driver/kobuki.hpp"
 #ifndef _WIN32
@@ -83,6 +81,7 @@ int main(int argc, char * argv[])
 
   auto node = rclcpp::Node::make_shared("kobuki_node");
   g_logger = node->get_logger();
+  auto parameter_service = std::make_shared<rclcpp::ParameterService>(node);
   auto cmd_vel_sub = node->create_subscription<geometry_msgs::msg::Twist>(
     "cmd_vel", cmdVelCallback, cmd_vel_qos_profile);
   auto odom_pub = node->create_publisher<nav_msgs::msg::Odometry>("odom", odom_and_imu_qos_profile);
@@ -90,14 +89,7 @@ int main(int argc, char * argv[])
   tf2_ros::TransformBroadcaster br(node);
 
   kobuki::Parameters parameters;
-#ifndef _WIN32
   parameters.device_port = "/dev/kobuki";
-#else
-  //
-  // \\?\FTDIBUS#VID_0403+PID_6001+kobuki_AH02B8WIA#0000#{86e0d1e0-8089-11d0-9ce4-08003e301f73}
-  //
-  parameters.device_port = "\\\\.\\COM1";
-#endif
   node->get_parameter("device_port", parameters.device_port);
   std::string odom_frame = "odom";
   node->get_parameter("odom_frame", odom_frame);
