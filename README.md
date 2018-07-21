@@ -1,3 +1,33 @@
+## turtlebot2_demo (ardent) - 0.4.1-0
+
+The packages in the `turtlebot2_demo` repository were released into the `ardent` distro by running `/usr/bin/bloom-release turtlebot2_demo -t ardent -r ardent -e` on `Sat, 21 Jul 2018 00:54:14 -0000`
+
+These packages were released:
+- `depthimage_to_pointcloud2`
+- `turtlebot2_amcl`
+- `turtlebot2_cartographer`
+- `turtlebot2_demo`
+- `turtlebot2_drivers`
+- `turtlebot2_follower`
+- `turtlebot2_teleop`
+
+Version of package(s) in repository `turtlebot2_demo`:
+
+- upstream repository: https://github.com/ros2/turtlebot2_demo.git
+- release repository: https://github.com/ros2-gbp/turtlebot2_demo-release.git
+- rosdistro version: `0.4.0-0`
+- old version: `0.4.0-0`
+- new version: `0.4.1-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.6`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## turtlebot2_demo (bouncy) - 0.5.1-0
 
 The packages in the `turtlebot2_demo` repository were released into the `bouncy` distro by running `/usr/bin/bloom-release turtlebot2_demo -r bouncy -t bouncy -e` on `Tue, 17 Jul 2018 23:10:52 -0000`
