@@ -1,0 +1,12 @@
+Source: ros-ardent-turtlebot2-drivers
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-kobuki-driver, ros-ardent-ament-cmake, ros-ardent-ament-lint-auto, ros-ardent-ament-lint-common, ros-ardent-geometry-msgs, ros-ardent-nav-msgs, ros-ardent-rclcpp, ros-ardent-sensor-msgs, ros-ardent-tf2, ros-ardent-tf2-ros, ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-turtlebot2-drivers
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-kobuki-driver, ros-ardent-geometry-msgs, ros-ardent-nav-msgs, ros-ardent-rclcpp, ros-ardent-sensor-msgs, ros-ardent-tf2, ros-ardent-tf2-ros, ros-ardent-ros-workspace
+Description: Set of drivers to talk to the kobuki base.
