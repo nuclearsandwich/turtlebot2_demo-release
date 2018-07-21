@@ -1,4 +1,4 @@
-From ee59005dc7fd71b2d1d0951f3333beeb46c41ac1 Mon Sep 17 00:00:00 2001
+From 29f2b2d91a95c311e291ab48e67c3b3b44e05cb9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Thu, 7 Dec 2017 07:39:06 -0800
 Subject: [PATCH] Add kinetic dependencies and environment.
